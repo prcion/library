@@ -120,12 +120,14 @@
     <ClCompile Include="repository.cpp" />
     <ClCompile Include="service.cpp" />
     <ClCompile Include="ui.cpp" />
+    <ClCompile Include="validation.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="book.h" />
     <ClInclude Include="repository.h" />
     <ClInclude Include="service.h" />
     <ClInclude Include="ui.h" />
+    <ClInclude Include="validation.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

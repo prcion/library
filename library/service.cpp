@@ -1,16 +1,18 @@
 #include "service.h"
 #include <string>
 #include "book.h"
-#include <iostream>
+#include "validation.h"
 #include <assert.h>
 #include <vector>
-using namespace std;
+
+using std::string;
 using std::stoi;
 using std::vector;
 
 void service::add(int id, string title, string author, string gender, int year)
 {
 	book b{ id, title, author, gender, year };
+	val.validateBook(b);
 	repo.store_book(b);
 }
 

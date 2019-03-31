@@ -2,9 +2,11 @@
 #include "book.h"
 #include <vector>
 #include "repository.h"
+#include "validation.h"
 class service
 {
 private:
+	BookValidation val;
 	repository repo;
 public:
 	/*

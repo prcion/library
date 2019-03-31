@@ -140,34 +140,39 @@ void ui::run()
 		cout<<"1 Add\n2 Change\n3 Delete\n4 Filter\n5 Find\n6 Sort \n7 Print\n0 Exit\n";
 		int cmd = 0;
 		cin >> cmd;
-		switch (cmd)
-		{
-		case 1:
-			add_bk();
-			break;
-		case 2:
-			change_bk();
-			break;
-		case 3:
-			delete_bk();
-			break;
-		case 4:
-			filter_bk();
-			break;
-		case 5:
-			find_bk();
-			break;
-		case 6:
-			sort_bk();
-			break;
-		case 7:
-			print_all();
-			break;
-		case 0:
-			rule = 0;
-			break;
-		default:
-			printf("Comand invalid!!!\n");
+		try {
+			switch (cmd)
+			{
+			case 1:
+				add_bk();
+				break;
+			case 2:
+				change_bk();
+				break;
+			case 3:
+				delete_bk();
+				break;
+			case 4:
+				filter_bk();
+				break;
+			case 5:
+				find_bk();
+				break;
+			case 6:
+				sort_bk();
+				break;
+			case 7:
+				print_all();
+				break;
+			case 0:
+				rule = 0;
+				break;
+			default:
+				printf("Comand invalid!!!\n");
+			}
+		}
+		catch (validationBook& ex) {
+			cout << ex << '\n';
 		}
 	}
 }
