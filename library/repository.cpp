@@ -40,7 +40,7 @@ void repository::delete_book(int id)
 	}
 	all.pop_back();
 }
-vector<book> repository::get_all()
+vector<book>& repository::get_all() noexcept
 {
 	return all;
 }
@@ -50,7 +50,7 @@ book repository::back_book() const
 	return all.back();
 }
 
-int repository::len() const
+int repository::len() const noexcept
 {
 	return all.size();
 }
@@ -71,7 +71,8 @@ vector<book> repository::find_book(string comand, string comand2)
 				books.push_back(e);
 		if (comand == "year")
 		{
-			int year = stoi(comand2);
+			int year = 0;
+			year = stoi(comand2);
 			if (e.get_year() == year)
 				books.push_back(e);
 		}
@@ -104,8 +105,7 @@ vector <book> repository::sort_book(string comand)
 	return books;
 }
 
-repository::repository(){}
-repository::~repository(){}
+repository::repository() noexcept {}
 
 void test_repo()
 {

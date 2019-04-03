@@ -1,6 +1,6 @@
 #pragma once
 #include "service.h"
-
+#include "validation.h"
 // Class UI
 class ui
 {
@@ -61,9 +61,7 @@ public:
 	void run();
 
 	// Create the class of type ui
-	ui();
+	ui() noexcept;
 
-	// The destructor of the class
-	~ui();
 };
 

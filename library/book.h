@@ -12,7 +12,7 @@ public:
 	/*
 	 * return the id of the entity's current
 	 */
-	int get_id() const;
+	int get_id() const noexcept;
 
 	/*
 	 * return the author of the entity's current
@@ -32,7 +32,7 @@ public:
 	/*
 	 * return the year of the entity's current
 	 */
-	int get_year() const;
+	int get_year() const noexcept;
 	
 
 	/*
@@ -53,7 +53,7 @@ public:
 	/*
 	 * set the year of the entity's current with other year
 	 */
-	void set_year(int s_year);
+	void set_year(int s_year) noexcept;
 
 
 	/*
@@ -69,11 +69,7 @@ public:
 					post: A final create a entity's book
 	 */
 	book(int id, string title, string author, string gender, int year);
-
-	/*
-	 * Destroy the class book
-	 */
-	~book();
+	book(const book &p);
 };
 void test_book();
 

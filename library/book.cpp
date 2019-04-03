@@ -1,6 +1,8 @@
 #include "book.h"
 #include <assert.h>
 #include <string>
+#include <iostream>
+using namespace std;
 
 book::book(int id, string title, string author, string gender, int year)
 {
@@ -10,6 +12,15 @@ book::book(int id, string title, string author, string gender, int year)
 	this->gender = gender;
 	this->year = year;
 
+}
+
+book::book(const book &p)
+{
+	this->id = p.id;
+	this->title = p.title;
+	this->author = p.author;
+	this->gender = p.gender;
+	this->year = p.year;
 }
 
 
@@ -25,13 +36,13 @@ void book::set_gender(string s_gender)
 {
 	this->gender = s_gender;
 }
-void book::set_year(int s_year)
+void book::set_year(int s_year) noexcept
 {
 	this->year = s_year;
 }
 
 
-int book::get_id() const
+int book::get_id() const noexcept
 {
 	return id;
 }
@@ -47,13 +58,11 @@ string book::get_gender() const
 {
 	return gender;
 }
-int book::get_year() const
+int book::get_year() const noexcept
 {
 	return year;
 }
-book::~book()
-{
-}
+
 
 void test_book()
 {

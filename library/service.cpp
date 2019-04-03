@@ -1,7 +1,6 @@
 #include "service.h"
 #include <string>
 #include "book.h"
-#include "validation.h"
 #include <assert.h>
 #include <vector>
 
@@ -34,7 +33,8 @@ vector<book> service::filter(string cmd, string cmd2)
 		}
 		else
 		{
-			int year = stoi(cmd2);
+			int year = 0;
+			year = stoi(cmd2);
 			if (e.get_year() == year)
 				new_books.push_back(e);
 		}
@@ -56,7 +56,7 @@ vector<book> service::sort_books(string comand)
 	return books;
 }
 
-int service::lenn()
+int service::lenn() noexcept
 {
 	return repo.len();
 }
@@ -64,7 +64,7 @@ void service::dell(int id)
 {
 	repo.delete_book(id);
 }
-vector <book> service::get()
+vector <book>& service::get() noexcept
 {
 	return repo.get_all();
 }
@@ -75,8 +75,10 @@ book service::back_b() const
 }
 
 
-service::service(){}
-service::~service(){}
+service::service() noexcept
+{ 
+}
+
 
 
 void test_service()

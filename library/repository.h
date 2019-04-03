@@ -10,7 +10,7 @@ private:
 public:
 
 	// Create the class of type repository
-	repository();
+	repository() noexcept;
 	
 	/*
 	 * Store the book in vector
@@ -31,7 +31,7 @@ public:
 	/*
 	 * return len of the vector <book>
 	 */
-	int len() const;
+	int len() const noexcept;
 
 	/*
 	 * return vector of book and find a book with a parameter definite
@@ -80,10 +80,8 @@ public:
 	/* 
 	 * Get a copy by a vector of type <book>
 	 */
-	vector <book> get_all();
+	vector <book>& get_all() noexcept;
 	
-	// The destructor of the class
-	~repository();
 };
 
 void test_repo();

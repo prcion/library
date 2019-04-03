@@ -116,17 +116,17 @@ void ui::print(vector<book> books)
 {
 	cout << "********************************" << '\n';
 	cout << "ID" << "     " << "TITLE" << "     " << "AUTHOR" << "     " << "GEN" << "     " << "YEAR" << '\n';
-	for (auto& el : books)
+	for (const auto& el : books)
 		cout << el.get_id() << "      " << el.get_title() << "     " << el.get_author()
 		<< "     " << el.get_gender() << "     " << el.get_year() << "     " << '\n';
 	cout << "********************************" << '\n';
 }
 void ui::print_all()
 {
-	vector <book> all = srv.get();
+	vector <book>& all = srv.get();
 	cout << "********************************"<< '\n';
 	cout << "ID" << "     " << "TITLE" << "     " << "AUTHOR" << "     " << "GEN" << "     " << "YEAR" << '\n';
-	for (auto& el : all)
+	for (const auto& el : all)
 		cout << el.get_id() << "      " << el.get_title() << "     " << el.get_author() 
 		<< "     " << el.get_gender() << "     " << el.get_year() << "     " << '\n';
 	cout << "********************************" << '\n';
@@ -171,17 +171,15 @@ void ui::run()
 				printf("Comand invalid!!!\n");
 			}
 		}
-		catch (validationBook& ex) {
+		catch (const validationBook& ex) {
 			cout << ex << '\n';
 		}
 	}
 }
 
-ui::ui()
+ui::ui() noexcept
 {
 }
 
 
-ui::~ui()
-{
-}
+

@@ -1,0 +1,21 @@
+[2019-04-02 08:51:28] [info] Start Program:
+Path:"D:\POO\library\Debug\library.exe"
+Arguments:
+Working directory: "D:\POO\library\library\"
+Modules: Selected: D:\POO\library\Debug\library.exe Excluded: 
+Sources: Selected: D:\POO\library\library Excluded: ui.c 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: Binary C:\Users\Admin\AppData\Local\Temp\5lp21k5n.ana 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2019-04-02 08:51:28] [info] Module: D:\POO\library\Debug\library.exe is selected because it matches selected pattern: D:\POO\library\Debug\library.exe
+[2019-04-02 08:51:30] [info] ----------------------------------------------------
+[2019-04-02 08:51:30] [info] Coverage binary generated in file: C:\Users\Admin\AppData\Local\Temp\5lp21k5n.ana
+[2019-04-02 08:51:30] [info] ----------------------------------------------------

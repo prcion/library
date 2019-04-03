@@ -88,15 +88,14 @@ public:
 	/*
 	 * Get a copy by a vector of type <book>
 	 */
-	vector <book> get();
+	vector <book>& get() noexcept;
 
 	/*
 	 * return len of the vector <book>
 	 */
-	int lenn();
+	int lenn() noexcept;
 
-	service();
-	~service();
+	service() noexcept;
 };
 
 void test_service();

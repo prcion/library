@@ -1,7 +1,8 @@
 #pragma once
 #include "book.h"
 #include <vector>
-using namespace std;
+using std::vector;
+using std::ostream;
 class validationBook
 {
 	vector <string> msg;

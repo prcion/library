@@ -1,0 +1,3 @@
+﻿  ui.cpp
+  library.vcxproj -> D:\POO\library\Debug\library.exe
+d:\poo\library\library\book.cpp(17): warning C26432: If you define or delete any default operation in the type 'class book', define or delete them all (c.21).
